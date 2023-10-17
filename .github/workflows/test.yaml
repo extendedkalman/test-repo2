@@ -9,9 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v2
+      - name: checking out step
+        run: echo "checking out"
+        shell: bash
+        
       - name: Use Custom Action
         uses: extendedkalman/test-repo/.github/actions/test@main
         with:
