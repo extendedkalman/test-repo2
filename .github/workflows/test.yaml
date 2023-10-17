@@ -1,15 +1,19 @@
-name: use it
+name: Workflow with Custom Action
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repo
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: action usage
-      uses: extendedkalman/test-repo/test@v4
-      with:
-        message: "Merhaba, Dünya!"
+      - name: Use Custom Action
+        uses: extendedkalman/test-repo/test@v4
+        with:
+          message: "Hello from my custom action!"
+
