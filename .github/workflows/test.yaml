@@ -18,8 +18,3 @@ jobs:
         uses: extendedkalman/test-repo/.github/actions/test@main
         with:
           message: "Hello from my custom action!"
-
-      - name: use local file
-        uses: ./test-repo/.github/actions/test/action.yaml
-        with:
-          message: "invoke from local path"
