@@ -19,3 +19,7 @@ jobs:
         with:
           message: "Hello from my custom action!"
 
+      - name: use local file
+        uses: ./test-repo/actions/test/action.yaml
+        with:
+          message: "invoke from local path"
